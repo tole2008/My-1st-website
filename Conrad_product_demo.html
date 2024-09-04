@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color:#f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #1ad4a9;
+            box-shadow: 0 0 30px 5px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+        .b1 {
+            cursor: pointer;
+            color: #f9f4f6;
+            border: hsl(330, 6%, 7%);
+            margin: 20px auto;
+            padding: 20px;
+            border-width: 1cm;
+            background-color: rgb(46, 27, 220);
+        }
+        .b1:hover{
+            background-color: chartreuse;
+        }
+        .p1 {
+            /* position: relative; */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Demo Page</h1>
+    </header>
+    <div class="container">
+        <h2>Welcome to the Demo Page</h2>
+        <p id = "demo">This is a simple demo page to showcase HTML and CSS.</p>
+    </div>
+    <br>
+    <hr>
+    <br>
+    <p class = "p1"><buttom class = "b1" onclick="change()">Click here to see Surprise</buttom></p>
+    <img id = "pic1" src='https://img.freepik.com/premium-photo/woman-technological-headdress-ai-generated_990017-6793.jpg' alt = "picture of nose strips" height="30%" width="30%" style="display: none;">
+    <!-- <li>sisisi</li> -->
+     <script>
+        var flag = true;
+        function change()
+        {
+            if (flag)
+            {
+                document.getElementById('demo').innerHTML = 'This is a demo page, but this is for conrad Pollen Allergy and/or PHDH';
+                document.getElementById('pic1').style.display = "none";
+                flag = false;
+            }
+            else 
+            {
+                document.getElementById('demo').innerHTML = 'Creepy, creepy, something comes out';
+                document.getElementById('pic1').style.position = "relative";
+                document.getElementById('pic1').style.top = "50px";  // 距离页面顶部100px
+                document.getElementById('pic1').style.left = "650px";  // 距离页面左侧200px
+                document.getElementById('pic1').style.display = "block";
+                flag = true;
+            }
+        }
+        
+     </script>
+</body>
+</html>
